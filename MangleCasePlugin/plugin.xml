@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin>
+   
+<!-- Example 1: Adding an action to the default text editor -->
+
+<!-- Example 2: Adding a sub-menu to the Navigator view -->
+
+<!-- Example 3: Adding an action to an object -->
+
+<!-- Example 4: Adding actions to the Navigator view's menu and toolbar -->
+
+<!-- Example 5: Adding actions to the default text editor's toolbar -->
+
+<!-- Example 6: Adding actions to the default text editor's menu bar -->
+
+<!-- Example 7: Adding action set -->
+<extension point="org.eclipse.ui.actionSets">
+	<actionSet
+		id="com.rcp.eclipse.plugin.manglecase.set"
+		label="%actionSet.label.0"
+		visible="true">
+  <action
+        class="com.rcp.eclipse.plugin.manglecase.ToUpperCaseActionDelegate"
+        enablesFor="+"
+        id="MangleCasePlugin.action1"
+        label="%upper.action.label"
+        menubarPath="edit/mangle"
+        style="push"
+        tooltip="%upper.action.tooltip">
+     <selection
+           class="org.eclipse.jface.text.ITextSelection">
+     </selection>
+  </action>
+  <action
+        class="com.rcp.eclipse.plugin.manglecase.ToLowerCaseActionDelegate"
+        enablesFor="+"
+        id="com.rcp.eclipse.plugin.lower.action1"
+        label="%lower.action.label"
+        menubarPath="edit/mangle"
+        style="push"
+        tooltip="%lower.action.tooltip">
+     <selection
+           class="org.eclipse.jface.text.ITextSelection">
+     </selection>
+  </action>
+  <action
+        class="com.rcp.eclipse.plugin.manglecase.SwapCaseActionDelegate"
+        enablesFor="+"
+        id="com.rcp.eclipse.plugin.swap.action1"
+        label="%swap.action.label"
+        menubarPath="edit/mangle"
+        style="push"
+        tooltip="%swap.action.tooltip">
+     <selection
+           class="org.eclipse.jface.text.ITextSelection">
+     </selection>
+  </action> 
+	</actionSet>
+</extension>
+<extension
+      point="org.eclipse.ui.popupMenus">
+   <viewerContribution
+         id="MangleCasePlugin.viewerContribution1"
+         targetID="#CompilationUnitEditorContext">
+      <action
+            class="com.rcp.eclipse.plugin.manglecase.ToUpperCaseActionDelegate"
+            enablesFor="+"
+            helpContextId="com.rcp.eclipse.plugin.mangelcase.action4"
+            id="com.rcp.eclipse.plugin.mangelcase.action4"
+            label="%upper.action.label"
+            menubarPath="additions"
+            style="push"
+            tooltip="%upper.action.tooltip">
+         <selection
+               class="org.eclipse.jface.text.ITextSelection">
+         </selection>
+      </action>
+   </viewerContribution>
+   <viewerContribution
+         id="MangleCasePlugin.viewerContribution2"
+         targetID="#TextEditorContext">
+      <action
+            class="com.rcp.eclipse.plugin.manglecase.ToUpperCaseActionDelegate"
+            enablesFor="+"
+            helpContextId="com.rcp.eclipse.plugin.mangelcase.action4"
+            id="com.rcp.eclipse.plugin.mangelcase.action4"
+            label="%upper.action.label"
+            menubarPath="additions"
+            style="push"
+            tooltip="%upper.action.tooltip">
+         <selection
+               class="org.eclipse.jface.text.ITextSelection">
+         </selection>
+      </action>
+   </viewerContribution>
+   <viewerContribution
+         id="MangleCasePlugin.viewerContribution3"
+         targetID="#CompilationUnitEditorContext">
+      <action
+            class="com.rcp.eclipse.plugin.manglecase.ToLowerCaseActionDelegate"
+            enablesFor="+"
+            helpContextId="com.rcp.eclipse.plugin.mangelcase.action2"
+            id="com.rcp.eclipse.plugin.mangelcase.action2"
+            label="%lower.action.label"
+            menubarPath="additions"
+            style="push"
+            tooltip="%lower.action.tooltip">
+         <selection
+               class="org.eclipse.jface.text.ITextSelection">
+         </selection>
+      </action>
+   </viewerContribution>
+   <viewerContribution
+         id="MangleCasePlugin.viewerContribution4"
+         targetID="#TextEditorContext">
+      <action
+            class="com.rcp.eclipse.plugin.manglecase.ToLowerCaseActionDelegate"
+            enablesFor="+"
+            helpContextId="com.rcp.eclipse.plugin.mangelcase.action3"
+            id="com.rcp.eclipse.plugin.mangelcase.action3"
+            label="%lower.action.label"
+            menubarPath="additions"
+            style="push"
+            tooltip="%lower.action.tooltip">
+         <selection
+               class="org.eclipse.jface.text.ITextSelection">
+         </selection>
+      </action>
+   </viewerContribution>
+   <viewerContribution
+         id="MangleCasePlugin.viewerContribution5"
+         targetID="#CompilationUnitEditorContext">
+      <action
+            class="com.rcp.eclipse.plugin.manglecase.SwapCaseActionDelegate"
+            enablesFor="+"
+            helpContextId="com.rcp.eclipse.plugin.swap.action2"
+            id="com.rcp.eclipse.plugin.swap.action2"
+            label="%swap.action.label"
+            menubarPath="additions"
+            style="push"
+            tooltip="%swap.action.tooltip">
+         <selection
+               class="org.eclipse.jface.text.ITextSelection">
+         </selection>
+      </action>
+   </viewerContribution>
+   <viewerContribution
+         id="MangleCasePlugin.viewerContribution6"
+         targetID="#TextEditorContext">
+      <action
+            class="com.rcp.eclipse.plugin.manglecase.SwapCaseActionDelegate"
+            enablesFor="+"
+            helpContextId="com.rcp.eclipse.plugin.mangelcase.action5"
+            id="com.rcp.eclipse.plugin.mangelcase.action3"
+            label="%swap.action.label"
+            menubarPath="additions"
+            style="push"
+            tooltip="%swap.action.tooltip">
+         <selection
+               class="org.eclipse.jface.text.ITextSelection">
+         </selection>
+      </action>
+   </viewerContribution>
+</extension>
+<extension
+      id="product"
+      point="org.eclipse.core.runtime.products">
+   <product
+         application="org.eclipse.ui.ide.workbench"
+         name="Mangle Case Product">
+   </product>
+</extension> 
+
+<!-- Example 8: Adding an action to a custom text editor -->
+
+</plugin>
