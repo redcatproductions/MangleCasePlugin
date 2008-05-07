@@ -162,6 +162,18 @@
          </selection>
       </action>
    </viewerContribution>
+   <viewerContribution
+         id="MangleCasePlugin.viewerContribution1"
+         targetID="#CompilationUnitEditorContext">
+      <action
+            class="com.rcp.eclipse.plugin.manglecase.StripQuoteActionDelegate"
+            enablesFor="+"
+            id="MangleCasePlugin.action1"
+            label="Strip Quotes"
+            menubarPath="additions"
+            style="push">
+      </action>
+   </viewerContribution>
 </extension>
 <extension
       id="product"
