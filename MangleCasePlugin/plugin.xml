@@ -163,15 +163,16 @@
       </action>
    </viewerContribution>
    <viewerContribution
-         id="MangleCasePlugin.viewerContribution1"
+         id="MangleCasePlugin.viewerContribution7"
          targetID="#CompilationUnitEditorContext">
       <action
             class="com.rcp.eclipse.plugin.manglecase.StripQuoteActionDelegate"
             enablesFor="+"
-            id="MangleCasePlugin.action1"
-            label="Strip Quotes"
+            id="MangleCasePlugin.actionStripQuotes"
+            label="%strip.action.label"
             menubarPath="additions"
-            style="push">
+            style="push"
+            tooltip="%strip.action.tooltip">
       </action>
    </viewerContribution>
 </extension>

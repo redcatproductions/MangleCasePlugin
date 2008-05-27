@@ -12,14 +12,12 @@ import java.util.regex.Pattern;
 
 import org.apache.commons.lang.StringUtils;
 import org.eclipse.jface.action.IAction;
-import org.eclipse.jface.text.IDocument;
 import org.eclipse.jface.text.ITextSelection;
 import org.eclipse.ui.IEditorActionDelegate;
 import org.eclipse.ui.IEditorPart;
 import org.eclipse.ui.IWorkbenchWindow;
 import org.eclipse.ui.IWorkbenchWindowActionDelegate;
 import org.eclipse.ui.actions.ActionDelegate;
-import org.eclipse.ui.texteditor.IDocumentProvider;
 import org.eclipse.ui.texteditor.ITextEditor;
 
 public class StripQuoteActionDelegate extends ActionDelegate implements
@@ -47,7 +45,6 @@ public class StripQuoteActionDelegate extends ActionDelegate implements
 
 	private void stripQuotes(final ITextSelection selection,
 			final ITextEditor editor) {
-		IDocumentProvider provider = editor.getDocumentProvider();
 		Pattern pattern = Pattern
 				.compile("^\\s*\\+?\\s*\"([^\"\\+]*)\"\\s*\\+?\\s*$");
 
