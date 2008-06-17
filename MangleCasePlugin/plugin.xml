@@ -175,6 +175,20 @@
             tooltip="%strip.action.tooltip">
       </action>
    </viewerContribution>
+   <objectContribution
+         adaptable="true"
+         id="MangleCasePlugin.objectContribution2.restest"
+         nameFilter="*.res"
+         objectClass="org.eclipse.core.resources.IFile">
+      <action
+            class="com.rcp.eclipse.plugin.manglecase.SwapCaseActionDelegate"
+            enablesFor="1"
+            id="MangleCasePlugin.action3.test"
+            label="restest 3 label"
+            menubarPath="additions"
+            style="push">
+      </action>
+   </objectContribution>
 </extension>
 <extension
       id="product"
@@ -183,6 +197,29 @@
          application="org.eclipse.ui.ide.workbench"
          name="Mangle Case Product">
    </product>
+</extension>
+<extension
+      point="org.eclipse.ui.editorActions">
+   <editorContribution
+         id="MangleCasePlugin.editorContribution1"
+         targetID="com.rcp.localixeditor.editors.ResourceEditor">
+      <menu
+            id="MangleCasePlugin.menu1"
+            label="testlabel resource ed"
+            path="additions">
+      </menu>
+      <action
+            class="com.rcp.eclipse.plugin.manglecase.SwapCaseActionDelegate"
+            enablesFor="+"
+            id="MangleCasePlugin.action1.res"
+            label="testaction"
+            menubarPath="additions"
+            style="push">
+         <selection
+               class="org.eclipse.jface.text.ITextSelection">
+         </selection>
+      </action>
+   </editorContribution>
 </extension> 
 
 <!-- Example 8: Adding an action to a custom text editor -->
