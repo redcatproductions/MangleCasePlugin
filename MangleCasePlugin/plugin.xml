@@ -165,7 +165,7 @@
    <viewerContribution
          id="MangleCasePlugin.viewerContribution7"
          targetID="#CompilationUnitEditorContext">
-      <action
+       <action
             class="com.rcp.eclipse.plugin.manglecase.StripQuoteActionDelegate"
             enablesFor="+"
             id="MangleCasePlugin.actionStripQuotes"
