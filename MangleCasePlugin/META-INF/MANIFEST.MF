@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %Bundle-Name.0
 Bundle-SymbolicName: com.rcp.eclipse.plugin.mangleCase;singleton:=true
-Bundle-Version: 1.3.0
+Bundle-Version: 1.0.0.v2008070102
 Bundle-Activator: com.rcp.eclipse.plugin.manglecase.Activator
 Bundle-Localization: plugin
 Require-Bundle: org.eclipse.ui,
