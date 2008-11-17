@@ -175,6 +175,32 @@
             tooltip="%strip.action.tooltip">
       </action>
    </viewerContribution>
+   <viewerContribution
+         id="MangleCasePlugin.viewerContribution8"
+         targetID="#CompilationUnitEditorContext">
+      <action
+            class="com.rcp.eclipse.plugin.manglecase.DecorateWithQuoteActionDelegate"
+            enablesFor="+"
+            id="MangleCasePlugin.actionAddQuotes"
+            label="%decorate.action.label"
+            menubarPath="additions"
+            style="push"
+            tooltip="%decorate.action.tooltip">
+      </action>
+   </viewerContribution>
+   <viewerContribution
+         id="MangleCasePlugin.viewerContribution9"
+         targetID="#CompilationUnitEditorContext">
+      <action
+            class="com.rcp.eclipse.plugin.manglecase.DecorateWithQuoteAndSpacesActionDelegate"
+            enablesFor="+"
+            id="MangleCasePlugin.actionAddQuotes"
+            label="%decorateSpaces.action.label"
+            menubarPath="additions"
+            style="push"
+            tooltip="%decorateSpaces.action.tooltip">
+      </action>
+   </viewerContribution>
 </extension>
 
 <!-- Example 8: Adding an action to a custom text editor -->
